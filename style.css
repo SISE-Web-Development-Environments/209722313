@@ -5,3 +5,48 @@
 	height: 35px;
 	background: white;
 }
+#NameTitle {
+	color: blue;
+	text-align: center;
+	font-family: 'Segoe UI';
+}
+.Titles {
+	color: green;
+	font-family: 'Segoe UI';
+	text-align: center;
+}
+.Paragraphs {
+	text-align: justify;
+	font-family: 'Segoe UI';
+	padding-left: 20px;
+	padding-right: 20px;
+}
+#navbar {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	background-color: indigo;
+	overflow: hidden;
+	position: sticky;
+	top: 0;
+	width: 100%;
+	font-family: 'Segoe UI';
+}
+.navbaritem {
+	display: inline;
+	color: white;
+}
+.navbaritem a{
+	display: inline-block;
+	color: white;
+	text-align: center;
+	padding: 14px 10px;
+	text-decoration: none;
+}
+.navbaritem a:hover {
+	background-color: #111;
+}
+.Bullets {
+	font-family: 'Segoe UI';
+}
