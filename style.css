@@ -25,6 +25,7 @@
 	top: 0;
 	width: 100%;
 	font-family: 'Segoe UI';
+	border-radius: 10px;
 }
 .navbaritem {
 	display: inline;
