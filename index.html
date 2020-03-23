@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Yakov Mallah</title>
-  <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body style="background-color:lightskyblue;">
     <ul id="navbar">
@@ -15,15 +15,14 @@
       <li class="navbaritem"><a href="#ContactMe">Contact Me</a></li>
     </ul>
 
-    <h1 id="NameTitle">Yakov Mallah</h1>
-
+    <h1 id="NameTitle">Yakov Mallah &#128512;</h1>
     <h2 class="Titles" id="AboutMe">About Me</h2>
     <p class="Paragraphs">
-      My name is <b>Yakov Mallah</b>, but my friends call me koby. <br>
-      I was born in South Africa in 1999. My family and I came to Israel in 2001, when I was 2 years old. <br>
-      I am a Software Information Systems Engineering student at Ben-Gurion University. <br>
-      I like coding, watching Netflix, reading books and learning. <br>
-      I find interest in almost everything. <br>
+      My name is <b>Yakov Mallah</b>, but my friends call me Koby.
+      I was born in South Africa in 1999. My family and I came to Israel in 2001, when I was 2 years old.
+      I am a Software Information Systems Engineering student at Ben-Gurion University.
+      I like coding, watching Netflix, reading books and learning.
+      I find interest in almost everything.
       I work in the BGU's cyber labs and I research topics that combine machine learning and cyber security. <br>
       I idolize <b>Elon Musk</b>, the ceo of Tesla, SpaceX and The Boring Company, because of the following reasons:
       <ul>
@@ -32,10 +31,10 @@
       </ul>
     </p>
     <h2 class="Titles" id="MyPhotos">My Photos</h2>
-    <p class="Paragraphs">
-      <img src="Picture1.jpeg" width=33%>
-      <img src="Picture2.jpeg" width=33%>
-      <img src="Picture3.jpg" width=32%>
+    <p class="Paragraphs" style="text-align: center;">
+      <img src="Picture1.jpeg" height=200px>
+      <img src="Picture2.jpeg" height=200px>
+      <img src="Picture3.jpg" height=200px>
     </p>
     <h2 class="Titles" id="MyPlaylist">My Playlist</h2>
     <p class="Paragraphs" style="text-align: center;">
@@ -50,48 +49,75 @@
       <img src="QRcode.png">
     </p>
     <h2 class="Titles" id="Q&A">Q&A</h2>
-    <p class="Paragraphs">
+    <p class="Paragraphs" width="50%">
       <ol>
         <li class="Bullets">
-          <u>Three main differences between web1, web2 and web3:</u>
+          <u>Three main differences between web 1.0, web 2.0 and web 3.0:</u>
           <ul>
-            <li class="Bullets">One</li>
-            <li class="Bullets">Two</li>
-            <li class="Bullets">Three</li>
+            <li class="Bullets">In web 1.0, there is only limited interaction between the sites and the web users.</li>
+            <li class="Bullets">In web 2.0, unlike web1, there is much more interaction between web users and sites, which allows users to interact more
+              freely with each other.
+            </li>
+            <li class="Bullets">In web 3.0, computers can interpret information like humans and generate and distribute content in an intelligent way
+              for the needs of the users.
+            </li>
           </ul>
         </li>
         <li class="Bullets">
           <u>A use case that shows the difference between web1, web2 and web3:</u>
-          <br>
-          <div style="text-indent: 40px;">Use Case</div>
+          <div class="Paragraphs">Wordpress is a web 2.0 site, as it allows the users to both search for blogs
+          and to comment on posts of other users' blogs. Users can comment on posts, which is why Wordpress is not a web 1.0 site.
+          Wordpress is not a web 3.0 site because it does not use any intelligence to personalize the blogs for each user.</div>
         </li>
       </ol>
     </p>
     <h2 class="Titles" id="ContactMe">Contact Me</h2>
-    <p class="Paragraphs">
-      <form action="mailto:mallah@post.bgu.ac.il" method="post" enctype="text/plain" style="padding-left: 40px;padding-bottom: 20px;font-family: Segoe UI;">
-        E-mail:<br>
-        <input type="text" name="mail"><br>
-        Content:<br>
-        <input type="text" name="content" size="50"><br><br>
-        <input type="submit" value="Send">
+    <table style="margin-left: auto;margin-right: auto;">
+      <form name="mailTo" action="mailto:mallah@post.bgu.ac.il" method="GET" style="padding-left: 40px;font-family: segoe ui;" onsubmit="addFrom()">
+        <tr>
+          <td>From:</td>
+          <td><input name="address" type="text"/></td>
+        </tr>
+        <tr>
+          <td>Subject:</td>
+          <td><input name="subject" type="text"/></td>
+        </tr>
+        <tr>
+          <td>Content:</td>
+          <td><textarea id="content" name="body" style="width:160px;"></textarea></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <input class="button" type="button" value="&#128512;" onclick="addEmoji('&#128512;')"/>
+            <input class="button" type="button" value="&#128513;" onclick="addEmoji('&#128513;')"/>
+            <input class="button" type="button" value="&#128540;" onclick="addEmoji('&#128540;')"/>
+            <input class="button" type="button" value="&#128564;" onclick="addEmoji('&#128564;')"/>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <input class="button" type="submit" value="Send"/>
+          <input class="button" type="button" value="Clear" onclick="clearMessage()"/>
+          </td>
+        </tr>
       </form>
-    </p>
+    </table>
     <br>
     <br>
-
     <script type="text/javascript">
-    $(function(){
-      $("#nav a").click(function(e){
-        e.preventDefault();
-        $('html,body').scrollTo(this.hash,this.hash); 
-      });
-    });
-    </script>
-    <script type="text/javascript">
-    $(document).scroll(function() {
-        $('#menu').toggle($(this).scrollTop()>1000)
-    });​
+      function addEmoji(str){
+        document.mailTo.body.value += str;
+      }
+      function addFrom(){
+        document.mailTo.body.value += '\n' + document.mailTo.address.value;
+      }
+      function clearMessage(){
+        document.mailTo.body.value = '';
+        document.mailTo.subject.value = '';
+        document.mailTo.address.value = '';
+      }
     </script>
   </body>
 </html>
