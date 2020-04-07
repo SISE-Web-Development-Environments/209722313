@@ -1,6 +1,6 @@
 My name: יעקב מלאך
 My id: 209722313
-Link to the website: https://sise-web-development-environments.github.io/assignment1-kobymallah/
+Link to the website: https://sise-web-development-environments.github.io/209722313/
 
 The webpage includes a summary about me, some photos of me and my friends (and coffee, because I love coffee!!!),
 my personal playlist, like and share buttons for facebook (please do!), a QR code you can share with your friends
